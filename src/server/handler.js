@@ -1,6 +1,12 @@
 const getRootHandler = async (h, req) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello, World!');
+  const response = h.response({
+    message: 'Welcome to the API',
+    status: 'success',
+  });
+
+  response.code(200);
+
+  return response;
 }
 
 module.exports = [
