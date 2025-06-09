@@ -1,5 +1,5 @@
 const [
-    getRootHandler,
+    getRootHandler, postRegisterUserHandler
 ] = require('./handler.js');
 
 const [
@@ -14,6 +14,12 @@ const routes = [
         method: 'GET',
         path: '/home',
         handler: getHomePage,
+    },
+    // Auth Server
+    {
+        method: 'POST',
+        path: '/api/users/register',
+        handler: postRegisterUserHandler,
     },
     // Utils
     {
