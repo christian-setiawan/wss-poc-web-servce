@@ -1,0 +1,1 @@
+const [] = require('handler.js');
