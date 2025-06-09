@@ -2,9 +2,19 @@ const [
     getRootHandler,
 ] = require('./handler.js');
 
+const [
+    getHomePage,
+] = require('./page-handler.js');
+
 const path = require('path');
 
 const routes = [
+    // Pages
+    {
+        method: 'GET',
+        path: '/home',
+        handler: getHomePage,
+    },
     // Utils
     {
         method: 'GET',

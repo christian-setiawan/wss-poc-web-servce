@@ -1,4 +1,4 @@
-const getRootHandler = async (h, req) => {
+const getRootHandler = async (request, h) => {
   const response = h.response({
     message: 'Welcome to the API',
     status: 'success',

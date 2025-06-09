@@ -43,6 +43,7 @@ const init = async () => {
         // Handle Errors
         const response = request.response;
         if (response instanceof Error) {
+            console.error('Error:', response);
             return h.response({ error: 'Resource not found' }).code(404).takeover();
         }
 
